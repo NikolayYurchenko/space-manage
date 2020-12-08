@@ -1,0 +1,66 @@
+import Vue from 'vue'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faHeart,
+  faFolder,
+  faQuestionCircle,
+  faFolderOpen,
+  faNewspaper,
+  faMeteor,
+  faPlusCircle,
+  faSignOutAlt,
+  faUserCog,
+  faEdit,
+  faFile,
+  faTimes,
+  faCloudUploadAlt,
+  faTrashAlt,
+  faSmileBeam,
+  faShieldAlt,
+  faBrain,
+  faLocationArrow,
+  faCalendarAlt,
+  faLockOpen,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faTwitter,
+  faVk,
+  faGoogle,
+  faYoutube,
+  faCodepen,
+  faGithub,
+  faTelegram
+}from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+library.add(
+  faHeart,
+  faFolder,
+  faQuestionCircle,
+  faFolderOpen,
+  faNewspaper,
+  faUserCog,
+  faPlusCircle,
+  faSignOutAlt,
+  faEdit,
+  faMeteor,
+  faCloudUploadAlt,
+  faTrashAlt,
+  faFile,
+  faBrain,
+  faTimes,
+  faSmileBeam,
+  faLocationArrow,
+  faShieldAlt,
+  faLockOpen,
+  faCalendarAlt,
+  faInstagram,
+  faTwitter,
+  faVk,
+  faGoogle,
+  faYoutube,
+  faCodepen,
+  faGithub,
+  faTelegram
+);
+Vue.component('font-awesome-icon', FontAwesomeIcon)

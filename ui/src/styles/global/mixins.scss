@@ -1,0 +1,62 @@
+@import 'variables';
+
+// ------------- BUTTONS --------------
+// @import "~@/styles/global/mixins.scss";
+//
+// &__button {
+// 	@include button(#344235, #fff, sm);
+// }
+//
+// ------------------------------------
+
+@mixin button($bg, $color, $button-size, $border-color: transparent) {
+	color: $color;
+	outline: none;
+	cursor: pointer;
+	background: $bg;
+	font-weight: 600;
+	line-height: 100%;
+	text-align: center;
+	border-radius: 24px;
+	display: inline-block;
+	text-decoration: none;
+	-webkit-user-select: none;
+	transition: all 0.3s ease;
+	font-family: $font-main;
+
+	// button size xs sm md
+	// TODO пересмотреть размеры кнопок
+	@if $button-size==xs {
+		font-size: 12px;
+		padding: 7px 16px;
+	}
+
+	@else if $button-size==sm {
+		font-size: 14px;
+		padding: 10px 32px;
+	}
+
+	@else if $button-size==md {
+		font-size: 16px;
+		padding: 13px 32px;
+	}
+
+	// border
+	@if $border-color {
+		border: 1px solid $border-color
+	}
+
+	&:hover {
+		background: darken($bg, 8%);
+		transition: all 0.3s ease;
+
+		@if $border-color {
+			background: darken($bg, 3%);
+			border: 1px solid darken($border-color, 6%)
+		}
+	}
+
+	&:active {
+		background: lighten($bg, 4%);
+	}
+}

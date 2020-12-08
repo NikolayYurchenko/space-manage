@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+@import url('https://unpkg.com/element-ui/lib/theme-chalk/index.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import './global/variables.scss';
+@import './global/mixins.scss';
+@import "./global/layout.scss";
+@import "./global/titles.scss";
+@import "./global/buttons.scss";
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: $font-main;
+
+	&::-webkit-scrollbar {
+		width: 7px;
+
+		&-thumb {
+			background: darken(white, 30%);
+			border-radius: 20px;
+		}
+
+		&-track {
+			background: $color-gray;
+		}
+	}
+
+	.fade-enter-active, .fade-leave-active {
+	  transition: opacity .5s;
+	}
+	.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+	  opacity: 0;
+	}
+}

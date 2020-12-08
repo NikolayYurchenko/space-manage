@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+@mixin title ($color, $fs,$fw) {
+    color:$color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+.title-lg {
+    @include title($dark-light, 3em, 400);
+}
+
+.title-md {
+    @include title($dark-light, 2em, 400);
+}
+.title-sm {
+    @include title($dark-light, 1.5em, 400);
+}
